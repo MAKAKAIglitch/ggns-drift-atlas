@@ -2,21 +2,19 @@
 
 A small local-first web map for viewing the public GeoJSON catalogue, drawing review areas, selecting intersecting features, and exporting the result.
 
-## Run
+## Windows quick start
+
+Double-click **`start-editor.bat`** in this folder. It checks for Python 3.10+, starts the local server, and opens the editor in your default browser.
+
+## Run manually
 
 Python 3.10+ is sufficient; no pip packages are required.
 
 ```bash
-python3 editor/app/server.py
+python3 app/server.py
 ```
 
 Open <http://127.0.0.1:8765>.
-
-Windows:
-
-```powershell
-py editor/app/server.py
-```
 
 ## Data loading
 
@@ -33,4 +31,8 @@ Draw one or more polygons, rectangles, or circles with the map toolbar. “Expor
 - Turf.js 7.4.0 (MIT)
 - OpenStreetMap standard raster tiles (with visible attribution; subject to the tile usage policy)
 
-CDN assets and the basemap require an internet connection. The Python server binds only to `127.0.0.1` and exposes no write API.
+CDN assets and the basemap require an internet connection. The Python server itself uses only the Python standard library and listens on loopback (`127.0.0.1`).
+
+## Safety and data quality
+
+Records are observations, not proof of spoofing or transmitter locations. Review records before sharing. Do not publish personal movement traces or identifying device/user details.
