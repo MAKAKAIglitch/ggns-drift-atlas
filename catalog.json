@@ -1,0 +1,15 @@
+{
+  "catalog_version": 1,
+  "dataset_name": "GNSS Drift Atlas",
+  "dataset_version": "0.1.0",
+  "updated_at": null,
+  "datasets": [
+    {
+      "id": "atlas",
+      "title": "Public atlas",
+      "path": "data/atlas.geojson",
+      "format": "GeoJSON",
+      "description": "Reported GNSS positions and user-drawn review geometries. Features are observations, not proof of spoofing or transmitter locations."
+    }
+  ]
+}
