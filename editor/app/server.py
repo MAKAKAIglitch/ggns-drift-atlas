@@ -75,7 +75,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def end_headers(self) -> None:
         self.send_header("X-Content-Type-Options", "nosniff")
-        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         super().end_headers()
 
     def _send_bytes(self, payload: bytes, content_type: str, source: str | None = None) -> None:
