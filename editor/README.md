@@ -29,7 +29,7 @@ Draw one or more polygons, rectangles, or circles with the map toolbar. “Expor
 - Leaflet 1.9.4 (BSD-2-Clause)
 - Leaflet-Geoman Free 2.20.0 (MIT)
 - Turf.js 7.4.0 (MIT)
-- OpenStreetMap standard raster tiles (with visible attribution; subject to the tile usage policy)
+- OpenStreetMap standard raster tiles via the official `https://tile.openstreetmap.org/{z}/{x}/{y}.png` endpoint, with linked attribution and the required browser Referer (subject to the tile usage policy)
 
 CDN assets and the basemap require an internet connection. The Python server itself uses only the Python standard library and listens on loopback (`127.0.0.1`). It sends `Referrer-Policy: strict-origin-when-cross-origin`, allowing the browser to include the origin on OpenStreetMap tile requests as required by the OSM tile usage policy. The editor requests tiles only for the map viewport currently being viewed; it has no tile prefetch or offline-download feature.
 
