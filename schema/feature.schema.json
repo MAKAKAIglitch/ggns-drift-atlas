@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MAKAKAIglitch/ggns-drift-atlas/blob/main/schema/feature.schema.json",
+  "title": "GNSS Drift Atlas feature properties",
+  "description": "Project-specific properties for RFC 7946 GeoJSON Features.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "feature_type": { "enum": ["reported_fix", "review_zone"] },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "verification": { "enum": ["unverified", "corroborated", "rejected"] },
+    "confidence": { "enum": ["low", "medium", "high"] },
+    "source_type": { "enum": ["manual", "public_report", "device_log"] },
+    "notes": { "type": "string", "maxLength": 1000 }
+  },
+  "required": ["id", "feature_type", "verification"],
+  "additionalProperties": true
+}
