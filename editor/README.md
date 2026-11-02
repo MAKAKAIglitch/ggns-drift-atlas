@@ -31,7 +31,7 @@ Draw one or more polygons, rectangles, or circles with the map toolbar. “Expor
 - Turf.js 7.4.0 (MIT)
 - OpenStreetMap standard raster tiles (with visible attribution; subject to the tile usage policy)
 
-CDN assets and the basemap require an internet connection. The Python server itself uses only the Python standard library and listens on loopback (`127.0.0.1`).
+CDN assets and the basemap require an internet connection. The Python server itself uses only the Python standard library and listens on loopback (`127.0.0.1`). It sends `Referrer-Policy: strict-origin-when-cross-origin`, allowing the browser to include the origin on OpenStreetMap tile requests as required by the OSM tile usage policy. The editor requests tiles only for the map viewport currently being viewed; it has no tile prefetch or offline-download feature.
 
 ## Safety and data quality
 
