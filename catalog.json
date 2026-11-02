@@ -1,7 +1,7 @@
 {
   "catalog_version": 1,
   "dataset_name": "GNSS Drift Atlas",
-  "dataset_version": "0.1.1",
+  "dataset_version": "0.1.3",
   "updated_at": "2026-11-02",
   "datasets": [
     {
